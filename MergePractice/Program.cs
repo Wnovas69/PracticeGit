@@ -11,7 +11,10 @@ builder.Services.AddDbContext<PoSContext>(options =>
  options.UseSqlServer(builder.Configuration.GetConnectionString("PoS")));
 
 builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
