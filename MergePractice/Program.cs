@@ -12,6 +12,7 @@ builder.Services.AddDbContext<PoSContext>(options =>
 
 builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IVentasRepository, VentasRepository>();
 var app = builder.Build();
 
 
