@@ -1,44 +1,38 @@
 ﻿using MergePractice.Context;
+using MergePractice.Data.Base;
 using MergePractice.Data.Entities;
 using MergePractice.Data.Interfaces;
 
 namespace MergePractice.Data.Repository
 {
-    public class UsuarioRepository : IUsuarioRepository
+    public class UsuarioRepository : BaseRepository<Usuario>, IUsuarioRepository
     {
         private readonly PoSContext context;
 
-        public UsuarioRepository(PoSContext context) 
+        public UsuarioRepository(PoSContext context) : base(context)
         {
             this.context = context;
         }
-        public void Agregar(Usuario usuario)
-        {
-            this.context.Usuario.Add(usuario);
-            this.context.SaveChanges();
-        }
 
-        public List<Usuario> List()
+        public override List<Usuario> List()
         {
-            return this.context.Usuario.ToList();
+            return base.List();
         }
-
-        public void Modificar(Usuario usuario)
+        public override void Agregar(Usuario entity)
         {
-            this.context.Usuario.Update(usuario);
-            this.context.SaveChanges();
+            base.Agregar(entity);
         }
-
-        public Usuario ObtenerId(int id)
+        public override void Modificar(Usuario entity)
         {
-            return this.context.Usuario.Find(id);
+            base.Modificar(entity);
         }
-
-        public void Remover(int UsuarioId)
+        public override Usuario ObtenerId(int id)
         {
-            var usuario = this.context.Usuario.First(cd => cd.Id == UsuarioId);
-            this.context.Usuario.Remove(usuario);
-            this.context.SaveChanges();
+            return base.ObtenerId(id);
+        }
+        public override void Remover(int Id)
+        {
+            base.Remover(Id);
         }
     }
 }

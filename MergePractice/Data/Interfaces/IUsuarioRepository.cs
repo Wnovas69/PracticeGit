@@ -1,18 +1,9 @@
-﻿using MergePractice.Data.Entities;
+﻿using MergePractice.Data.Base;
+using MergePractice.Data.Entities;
 
 namespace MergePractice.Data.Interfaces
 {
-    public interface IUsuarioRepository
+    public interface IUsuarioRepository : IBaseRepository<Usuario>
     {
-
-        void Agregar(Usuario usuario);
-
-        void Modificar (Usuario usuario);
-
-        List<Usuario> List();
-
-        Usuario ObtenerId(int id);
-
-        void Remover(int UsuarioId);
     }
 }

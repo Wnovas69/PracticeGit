@@ -1,17 +1,9 @@
-﻿using MergePractice.Data.Entities;
+﻿using MergePractice.Data.Base;
+using MergePractice.Data.Entities;
 
 namespace MergePractice.Data.Interfaces
 {
-    public interface ISuplidorRepository
+    public interface ISuplidorRepository : IBaseRepository<Suplidor>
     {
-        void Agregar(Suplidor suplidor);
-
-        void Modificar(Suplidor suplidor);
-
-        List<Suplidor> List();
-
-        Suplidor ObtenerId(int id);
-
-        void Remover(int usuarioId);
     }
 }
