@@ -1,46 +1,43 @@
 ﻿using MergePractice.Context;
+using MergePractice.Data.Base;
 using MergePractice.Data.Entities;
 using MergePractice.Data.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace MergePractice.Data.Repository
 {
-    public class SuplidorRepository : ISuplidorRepository
+    public class SuplidorRepository : BaseRepository<Suplidor>, ISuplidorRepository
     {
         private readonly PoSContext _context;
 
-        public SuplidorRepository(PoSContext context)
+        public SuplidorRepository(PoSContext context) : base(context)
         {
             _context = context;
         }
 
-        public void Agregar(Suplidor suplidor)
+        public override List<Suplidor> List()
         {
-            _context.Suplidor.Add(suplidor);
-            _context.SaveChanges();
+            return base.List();
         }
 
-        public List<Suplidor> List()
+        public override void Agregar(Suplidor entity)
         {
-            return _context.Suplidor.ToList();
+            base.Agregar(entity);
         }
 
-        public void Modificar(Suplidor suplidor)
+        public override void Modificar(Suplidor entity)
         {
-            _context.Suplidor.Update(suplidor);
-            _context.SaveChanges();
+            base.Modificar(entity);
         }
 
-        public Suplidor ObtenerId(int id)
+        public override void Remover(int Id)
         {
-            var suplidor = _context.Suplidor.Find(id);
-            return suplidor;
+            base.Remover(Id);
         }
 
-        public void Remover(int usuarioId)
+        public override Suplidor ObtenerId(int id)
         {
-            var suplidor = this.ObtenerId(usuarioId);
-            _context.Suplidor.Remove(suplidor);
-            _context.SaveChanges();
+            return base.ObtenerId(id);
         }
     }
 }
