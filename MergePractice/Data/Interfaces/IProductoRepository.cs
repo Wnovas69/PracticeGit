@@ -1,18 +1,13 @@
-﻿using MergePractice.Data.Entities;
+﻿using MergePractice.Data.Base;
+using MergePractice.Data.Entities;
 
 namespace MergePractice.Data.Interfaces
 {
-    public interface IProductoRepository
+    public interface IProductoRepository : IBaseRepository<Producto>
     {
 
-        void Agregar(Producto producto);
+       
 
-        void Modificar(Producto producto);
-
-        List<Producto> List();
-
-        Producto ObtenerId(int id);
-
-        void Remover(int ProductoId);
+       
     }
 }

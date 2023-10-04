@@ -1,44 +1,36 @@
 ﻿using MergePractice.Context;
+using MergePractice.Data.Base;
 using MergePractice.Data.Entities;
 using MergePractice.Data.Interfaces;
 
 namespace MergePractice.Data.Repository
 {
-    public class VentasRepository : IVentasRepository
+    public class VentasRepository : BaseRepository<Ventas>, IVentasRepository
     {
         private readonly PoSContext context;
 
-        public VentasRepository(PoSContext context)
+        public VentasRepository(PoSContext context) : base(context) 
         {
             this.context = context;
         }
-        public void Agregar(Ventas ventas)
-        {
-           this.context.Ventas.Add(ventas);
-           this.context.SaveChanges();
-        }
 
-        public List<Ventas> List()
+        public override void Agregar(Ventas entity)
         {
-            return this.context.Ventas.ToList();    
-        }
-
-        public void Modificar(Ventas ventas)
-        {
-            this.context.Update(ventas);
+            base.Agregar(entity);
             this.context.SaveChanges();
         }
 
-        public Ventas ObtenerPorId(int id)
+        public override void Modificar(Ventas entity)
         {
-            return this.context.Ventas.Find(id);
-        }
-
-        public void Remover(int VentasId)
-        {
-            var ventas = this.context.Ventas.First(cd  => cd.Id == VentasId);
-            this.context.Remove(ventas);
+            base.Modificar(entity);
             this.context.SaveChanges();
         }
+
+        public override void Remover(int Id)
+        {
+            base.Remover(Id);
+            this.context.SaveChanges();
+        }
+
     }
 }

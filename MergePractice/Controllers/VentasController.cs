@@ -23,7 +23,7 @@ namespace MergePractice.Controllers
         // GET: VentasController/Details/5
         public ActionResult Details(int id)
         {
-            var ventas = this.ventasRepository.ObtenerPorId(id);
+            var ventas = this.ventasRepository.ObtenerId(id);
             return View(ventas);
         }
 
@@ -45,7 +45,7 @@ namespace MergePractice.Controllers
         // GET: VentasController/Edit/5
         public ActionResult Edit(int id)
         {
-            var ventas = this.ventasRepository.ObtenerPorId(id);
+            var ventas = this.ventasRepository.ObtenerId(id);
             return View(ventas);
         }
 
