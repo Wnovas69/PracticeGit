@@ -10614,19 +10614,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\waner\\.nuget\\packages\\": {}
+    "C:\\Users\\acer\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects\\PracticeGit\\MergePractice\\MergePractice.csproj",
+      "projectUniqueName": "C:\\PracticandoMerge\\MergePractice\\MergePractice\\MergePractice.csproj",
       "projectName": "MergePractice",
-      "projectPath": "C:\\projects\\PracticeGit\\MergePractice\\MergePractice.csproj",
-      "packagesPath": "C:\\Users\\waner\\.nuget\\packages\\",
-      "outputPath": "C:\\projects\\PracticeGit\\MergePractice\\obj\\",
+      "projectPath": "C:\\PracticandoMerge\\MergePractice\\MergePractice\\MergePractice.csproj",
+      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+      "outputPath": "C:\\PracticandoMerge\\MergePractice\\MergePractice\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\waner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10634,7 +10639,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10685,7 +10689,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

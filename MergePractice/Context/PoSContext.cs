@@ -11,6 +11,9 @@ namespace MergePractice.Context
         }
 
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Producto> Producto { get; set; }
+
+        public DbSet<Ventas> Ventas { get; set; }
 
         public DbSet<Suplidor> Suplidor { get; set; }
     }
