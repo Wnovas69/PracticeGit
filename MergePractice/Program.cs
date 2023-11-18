@@ -11,8 +11,13 @@ builder.Services.AddDbContext<PoSContext>(options =>
  options.UseSqlServer(builder.Configuration.GetConnectionString("PoS")));
 
 builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+<<<<<<< HEAD
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 builder.Services.AddScoped<IVentasRepository, VentasRepository>();
+=======
+builder.Services.AddScoped<ISuplidorRepository, SuplidorRepository>();
+
+>>>>>>> origin/main
 var app = builder.Build();
 
 

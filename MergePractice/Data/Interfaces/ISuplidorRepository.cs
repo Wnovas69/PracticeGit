@@ -3,7 +3,7 @@ using MergePractice.Data.Entities;
 
 namespace MergePractice.Data.Interfaces
 {
-    public interface IUsuarioRepository : IBaseRepository<Usuario>
+    public interface ISuplidorRepository : IBaseRepository<Suplidor>
     {
     }
 }
